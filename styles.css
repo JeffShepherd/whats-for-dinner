@@ -49,16 +49,22 @@ header {
 
 .squares {
   background-color: rgba(225, 225, 225, .9);
-  width: 400px;
+  width: 450px;
   height: 400px;
+  padding: 40px 0px 0px 30px;
 }
 
 .left-square {
-  margin: 20px 80px 100px 80px;
+
+  margin: 30px;
+}
+
+.left-square-div {
+  margin: 30px 80px 100px 80px;
 }
 
 .right-square {
-  margin: 20px 20px 100px 80px;
+  margin: 30px 20px 100px 80px;
 }
 
 .cookpot {
@@ -68,14 +74,15 @@ header {
 }
 
 .what-looking-for {
-
+  padding-left: 23px;
 }
+
 .required-star {
   color: #ee5253;
 }
 
 .food-form-choice {
-  padding: 10px 0px 0px 40px;
+  padding: 2px 0px 2px 30px;
 }
 
 .lets-cook-button {
@@ -83,5 +90,5 @@ header {
   padding: 10px 40px 10px 40px;
   border: none;
   border-radius: 5px;
-  /* margin: 30px; */
+  margin: 10px 30px 30px 30px;
 }
