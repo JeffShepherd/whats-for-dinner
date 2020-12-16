@@ -28,19 +28,23 @@ header {
 
 /* MAIN */
 #container {
-
+  margin: 0px;
 }
+
 #left-section {
   border: black;
-  border-style: solid;
+  /* border-style: solid; */
   float: left;
-  width: 49%;
+  width: 50%;
+  margin: 0px;
 }
+
 #right-section {
   border: black;
-  border-style: solid;
+  /* border-style: solid; */
   float: right;
   width: 50%;
+  margin: 0px;
 }
 
 .squares {
@@ -48,9 +52,36 @@ header {
   width: 400px;
   height: 400px;
 }
+
 .left-square {
   margin: 20px 80px 100px 80px;
 }
+
 .right-square {
   margin: 20px 20px 100px 80px;
+}
+
+.cookpot {
+  height: 150px;
+  width: 150px;
+  margin: 115px;
+}
+
+.what-looking-for {
+
+}
+.required-star {
+  color: #ee5253;
+}
+
+.food-form-choice {
+  padding: 10px 0px 0px 40px;
+}
+
+.lets-cook-button {
+  background-color: #0fb9b1;
+  padding: 10px 40px 10px 40px;
+  border: none;
+  border-radius: 5px;
+  /* margin: 30px; */
 }
