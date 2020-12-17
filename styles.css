@@ -1,10 +1,81 @@
 /* font-family: 'Roboto', sans-serif;
-
 COLORS
 teal - #0fb9b1;
 frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
 red - #ee5253
-
 */
+/* ALL */
+body {
+  background-image: url(assets/burger-friends.jpg);
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+  margin: 0%;
+}
 
+/* HEADER */
+header {
+  background-color: #0fb9b1;
+  height: 75px;
+}
+#title {
+  text-align: left;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 25px 0px 20px 25px;
+  /* needs font weight - not working */
+}
+
+/* MAIN */
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* flex-grow: 4; */
+}
+
+#right-section {
+  min-width: 30%;
+  min-height: 30%;
+  background-color: rgba(225, 225, 225, .9);
+  margin-top: 3%;
+  margin-left: 5%;
+  display: flex;
+  justify-content: center;
+}
+.cookpot {
+  height: 35%;
+  width: 30%;
+ margin: 30%;
+}
+#left-section {
+  min-width: 30%;
+  min-height: 30%;
+  background-color: rgba(225, 225, 225, .9);
+  margin-top: 3%;
+  margin-right: 5%;
+  display: flex;
+  justify-content: center;
+}
+
+.looking-for {
+  padding-top: 8%;
+  margin: 10%;
+  font-weight: bold;
+}
+
+
+.what-looking-for {
+  font-size: 1.8em;
+
+}
+.required-star {
+  color: #ee5253;
+}
+
+.lets-cook-button {
+  background-color: #0fb9b1;
+  padding: 10px 40px 10px 40px;
+  border: none;
+  border-radius: 5px;
+}
