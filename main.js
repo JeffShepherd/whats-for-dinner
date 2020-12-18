@@ -36,13 +36,16 @@ function showDish() {
   removeCookpotImage(); //remove cookpot image
 }
 
-function getDish() {
-  //
+function generateSide() {
+  return sides[getRandomIndex(sides)]; //return random string from array
+}
+function generateMain() {
+  return mains[getRandomIndex(mains)]; //return random string from array
+}
+function generateDessert() {
+  return desserts[getRandomIndex(desserts)]; //return random string from array
 }
 
-function getRandomIndex(array) {
-  return Math.floor(Math.random() * array.length);
-}
 
 
 
@@ -52,7 +55,9 @@ function removeCookpotImage() {
   cookpotImage.classList.toggle('hidden');
 }
 
-
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}
 
 
 
