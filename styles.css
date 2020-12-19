@@ -24,7 +24,6 @@ header {
   font-size: 1.5em;
   font-weight: bold;
   padding: 25px 0px 20px 25px;
-  /* needs font weight - not working */
 }
 
 /* MAIN */
@@ -32,7 +31,6 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* flex-grow: 4; */
 }
 
 #right-section {
@@ -41,11 +39,13 @@ header {
   background-color: rgba(225, 225, 225, .9);
   margin-top: 3%;
   margin-left: 5%;
+  max-width: 400px;
 }
 .recipe-container {
   text-align: center;
   padding-top: 25%;
   font-weight: bold;
+  /* overflow-wrap: normal; */
 }
 .should-make {
   font-size: 1.3em;

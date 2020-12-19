@@ -39,6 +39,8 @@ function showDish() {
     recipeDisplay.innerText = generateMain();// show recipe
   } else if (meal === 'dessert') {
     recipeDisplay.innerText = generateDessert(); // show recipe
+  } else if (meal === 'entiremeal'){
+    recipeDisplay.innerText = generateEntireMeal();
   } else {
     console.log('nothing selected') //error
   }
@@ -55,7 +57,9 @@ function generateMain() {
 function generateDessert() {
   return desserts[getRandomIndex(desserts)]; //return random string from array
 }
-
+function generateEntireMeal() {
+  return `${generateMain()} with a side of ${generateSide()} and ${generateDessert()} for dessert!`
+}
 
 
 
