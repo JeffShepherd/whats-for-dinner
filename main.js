@@ -2,21 +2,13 @@
 ////Global variables/querySelectors
 //radio buttons
 var radioChoices = document.querySelectorAll('.choices');
-// var sideRadioButton = document.querySelector('#sides');
-// var mainRadioButton = document.querySelector('#mains');
-// var dessertRadioButton = document.querySelector('#desserts');
-
 //other buttons
 var letsCookButton = document.querySelector('.lets-cook-button');
 //left section
-
 //right section
-var cookpotImage = document.querySelector('.cookpot');
-
-
-
-
-
+var cookpotContainer = document.querySelector('.cookpot-container');
+var recipeContainer = document.querySelector('.recipe-container');
+var recipeDisplay = document.querySelector('.recipe-display');
 ////Event Listeners
 
 letsCookButton.addEventListener('click', showDish);
@@ -36,25 +28,24 @@ function getRadioValue() {
 
 
 
-
-
 //show dish and remove cookpot image
 function showDish() {
+  switchRightView();   //remove cookpot image and add recipe div
+
   var meal = getRadioValue();
   if (meal === 'side') {
-    console.log(generateSide()) // show recipe
+    recipeDisplay.innerText = generateSide();// show recipe
   } else if (meal === 'main') {
-    console.log(generateMain()) // show recipe
+    recipeDisplay.innerText = generateMain();// show recipe
   } else if (meal === 'dessert') {
-    console.log(generateDessert()) // show recipe
+    recipeDisplay.innerText = generateDessert(); // show recipe
   } else {
     console.log('nothing selected') //error
   }
-  removeCookpotImage(); //remove cookpot image
 }
 
 
-
+//generate meal functions
 function generateSide() {
   return sides[getRandomIndex(sides)]; //return random string from array
 }
@@ -70,10 +61,11 @@ function generateDessert() {
 
 
 
-function removeCookpotImage() {
-  cookpotImage.classList.toggle('hidden');
+function switchRightView() {
+  cookpotContainer.classList.add('hidden');
+  recipeContainer.classList.remove('hidden');
 }
-
+//get random index of array
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
