@@ -72,7 +72,8 @@ header {
 }
 
 .looking-for {
-  padding-top: 8%;
+  padding-top: 5%;
+  padding-bottom: 5%;
   margin: 10%;
   font-weight: bold;
 }
