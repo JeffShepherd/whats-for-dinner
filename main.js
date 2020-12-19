@@ -1,9 +1,11 @@
 //
 ////Global variables/querySelectors
 //radio buttons
-// var sideRadioButton = ;
-// var mainRadioButton = ;
-// var dessertRadioButton = ;
+var radioChoices = document.querySelectorAll('.choices');
+// var sideRadioButton = document.querySelector('#sides');
+// var mainRadioButton = document.querySelector('#mains');
+// var dessertRadioButton = document.querySelector('#desserts');
+
 //other buttons
 var letsCookButton = document.querySelector('.lets-cook-button');
 //left section
@@ -22,19 +24,36 @@ letsCookButton.addEventListener('click', showDish);
 
 
 ////Functions
+
+//gets value of radio button selected
+function getRadioValue() {
+  for (i = 0; i < radioChoices.length; i++) {
+    if (radioChoices[i].checked) {
+      return radioChoices[i].value
+    }
+  }
+}
+
+
+
+
+
 //show dish and remove cookpot image
 function showDish() {
-  if ("input = true") {
-    // show recipe
-  } else if ("input = true") {
-    // show recipe
-  } else if ("input = true") {
-    // show recipe
+  var meal = getRadioValue();
+  if (meal === 'side') {
+    console.log(generateSide()) // show recipe
+  } else if (meal === 'main') {
+    console.log(generateMain()) // show recipe
+  } else if (meal === 'dessert') {
+    console.log(generateDessert()) // show recipe
   } else {
-    //error
+    console.log('nothing selected') //error
   }
   removeCookpotImage(); //remove cookpot image
 }
+
+
 
 function generateSide() {
   return sides[getRandomIndex(sides)]; //return random string from array
