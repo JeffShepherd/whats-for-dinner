@@ -4,18 +4,46 @@
 var radioChoices = document.querySelectorAll('.choices');
 //other buttons
 var letsCookButton = document.querySelector('.lets-cook-button');
+var addARecipeButton = document.querySelector('.add-recipe-button')
+var addNewButton = document.querySelector('.add-button');
 //left section
 //right section
 var cookpotContainer = document.querySelector('.cookpot-container');
 var recipeContainer = document.querySelector('.recipe-container');
 var recipeDisplay = document.querySelector('.recipe-display');
+// other
+var addRecipeView = document.querySelector('.add-recipe-view');
+var recipeType = document.querySelector('.recipe-type-input');
+var recipeName = document.querySelector('.recipe-name-input');
+
+
+
 ////Event Listeners
 
 letsCookButton.addEventListener('click', showDish);
-
-
+addARecipeButton.addEventListener('click', showAddRecipeView);
+addNewButton.addEventListener('click', storeRecipe);
 
 ////Functions
+
+//store recipe in array
+function storeRecipe() {
+  console.log(recipeType.value)
+  if(recipeType.value === 'Side') {
+    sides.push(recipeName.value);
+  } else if(recipeType.value === 'Main Dish') {
+    mains.push(recipeName.value)
+  } else if(recipeType.value === 'Dessert') {
+    desserts.push(recipeName.value)
+  } else {
+    console.log('NOPE')//throw error
+  }
+}
+
+//shows add recipe FOOTER
+function showAddRecipeView() {
+  addRecipeView.classList.remove('hidden');
+}
 
 //gets value of radio button selected
 function getRadioValue() {
@@ -26,12 +54,9 @@ function getRadioValue() {
   }
 }
 
-
-
 //show dish and remove cookpot image
 function showDish() {
   switchRightView();   //remove cookpot image and add recipe div
-
   var meal = getRadioValue();
   if (meal === 'side') {
     recipeDisplay.innerText = generateSide();// show recipe
