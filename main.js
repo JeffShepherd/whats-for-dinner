@@ -26,32 +26,6 @@ addNewButton.addEventListener('click', storeRecipe);
 
 ////Functions
 
-//store recipe in array
-function storeRecipe() {
-  if (recipeType.value === 'Side') {
-    sides.push(recipeName.value);
-  } else if (recipeType.value === 'Main Dish') {
-    mains.push(recipeName.value)
-  } else if (recipeType.value === 'Dessert') {
-    desserts.push(recipeName.value)
-  } else {
-    return alert('Please only use recipe types of Side, Main Dish, or Dessert');
-  }
-  switchRightView();
-  recipeDisplay.innerText = recipeName.value;
-  resetRecipeInputs();
-}
-
-//clear recipe addition inputs
-function resetRecipeInputs() {
-  recipeType.value = '';
-  recipeName.value = '';
-}
-
-//shows add recipe FOOTER
-function showAddRecipeView() {
-  addRecipeView.classList.remove('hidden');
-}
 
 //gets value of radio button selected
 function getRadioValue() {
@@ -98,6 +72,32 @@ function generateEntireMeal() {
 }
 
 
+//store recipe in array
+function storeRecipe() {
+  if (recipeType.value === 'Side') {
+    sides.push(recipeName.value);
+  } else if (recipeType.value === 'Main Dish') {
+    mains.push(recipeName.value)
+  } else if (recipeType.value === 'Dessert') {
+    desserts.push(recipeName.value)
+  } else {
+    return alert('Please only use recipe types of Side, Main Dish, or Dessert');
+  }
+  switchRightView();
+  recipeDisplay.innerText = recipeName.value;
+  resetRecipeInputs();
+}
+
+//clear recipe addition inputs
+function resetRecipeInputs() {
+  recipeType.value = '';
+  recipeName.value = '';
+}
+
+//shows add recipe FOOTER
+function showAddRecipeView() {
+  addRecipeView.classList.remove('hidden');
+}
 
 
 
