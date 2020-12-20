@@ -1,32 +1,32 @@
 ## **PROJECT TITLE: What's For Dinner?**
 
-ADD description here
+What’s for dinner? *The ultimate question.* We built an app that helps users choose a dish and put together meals.
 
 
 #### **Instructions for running and viewing the project:**
 
 The app can be accessed by following these instructions:
 
-1. Clone the repository ```git clone git@github.com:JeffShepherd/whats-for-dinner.git```
-2. Open the index.html file in a browser ```open index.html```
+1. Clone the repository: ```git clone git@github.com:JeffShepherd/whats-for-dinner.git```
+2. Open the index.html file in a browser: ```open index.html```
 
 
 
 #### **Contributors:**
 
-* **Jeff Shepherd:**
-https://github.com/JeffShepherd/
+* **Jeff Shepherd:** Please check out my links below!
+
+[GitHub](https://github.com/JeffShepherd/)
+
+[LinkedIn](https://www.linkedin.com/in/jefflshepherd/)
 
 
 
 #### **Features:**
 
-* A
-* B
-* C
-* D
-* E
-
+* A user can select a recipe type, and have the app generate a random suggestion of meal from that type.
+* Ability to select an entire meal, which will display a random side, main dish, and dessert.
+* Users are able to click "Add A Recipe", which allows them to add their own recipes to the existing list of suggestions.
 
 #### **Technologies:**
 
@@ -41,9 +41,7 @@ The following features should be added into future versions of the app:
 * Add animations to button on click.
 
 
-
-
-## Original Challenge (forked from Turing School of Software and Design):
+## Original Challenge (via Turing School of Software and Design):
 
 What's for dinner? The ultimate question. You will be building an app that helps users choose a recipe and put together meals. 
 
