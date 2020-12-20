@@ -1,4 +1,4 @@
-## **PROJECT TITLE: What's For Dinner?**
+## **What's For Dinner?**
 
 What’s for dinner? *The ultimate question.* We built an app that helps users choose a dish and put together meals.
 
@@ -12,9 +12,9 @@ The app can be accessed by following these instructions:
 
 
 
-#### **Contributors:**
+**Contributors:** Jeff Shepherd
 
-* **Jeff Shepherd:** Please check out my links below!
+Please check out my links below!
 
 [GitHub](https://github.com/JeffShepherd/)
 
@@ -41,7 +41,7 @@ The following features should be added into future versions of the app:
 * Add animations to button on click.
 
 
-## Original Challenge (via Turing School of Software and Design):
+#### Original Challenge (via Turing School of Software and Design):
 
 What's for dinner? The ultimate question. You will be building an app that helps users choose a recipe and put together meals. 
 
