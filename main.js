@@ -28,16 +28,24 @@ addNewButton.addEventListener('click', storeRecipe);
 
 //store recipe in array
 function storeRecipe() {
-  console.log(recipeType.value)
-  if(recipeType.value === 'Side') {
+  if (recipeType.value === 'Side') {
     sides.push(recipeName.value);
-  } else if(recipeType.value === 'Main Dish') {
+  } else if (recipeType.value === 'Main Dish') {
     mains.push(recipeName.value)
-  } else if(recipeType.value === 'Dessert') {
+  } else if (recipeType.value === 'Dessert') {
     desserts.push(recipeName.value)
   } else {
-    console.log('NOPE')//throw error
+    return alert('Please only use recipe types of Side, Main Dish, or Dessert');
   }
+  switchRightView();
+  recipeDisplay.innerText = recipeName.value;
+  resetRecipeInputs();
+}
+
+//clear recipe addition inputs
+function resetRecipeInputs() {
+  recipeType.value = '';
+  recipeName.value = '';
 }
 
 //shows add recipe FOOTER
@@ -56,18 +64,18 @@ function getRadioValue() {
 
 //show dish and remove cookpot image
 function showDish() {
-  switchRightView();   //remove cookpot image and add recipe div
+  switchRightView(); //remove cookpot image and add recipe div
   var meal = getRadioValue();
   if (meal === 'side') {
-    recipeDisplay.innerText = generateSide();// show recipe
+    recipeDisplay.innerText = generateSide(); // show recipe
   } else if (meal === 'main') {
-    recipeDisplay.innerText = generateMain();// show recipe
+    recipeDisplay.innerText = generateMain(); // show recipe
   } else if (meal === 'dessert') {
     recipeDisplay.innerText = generateDessert(); // show recipe
-  } else if (meal === 'entiremeal'){
+  } else if (meal === 'entiremeal') {
     recipeDisplay.innerText = generateEntireMeal();
   } else {
-    console.log('nothing selected') //error
+    alert ('Please select a recipe type');//error
   }
 }
 
@@ -76,12 +84,15 @@ function showDish() {
 function generateSide() {
   return sides[getRandomIndex(sides)]; //return random string from array
 }
+
 function generateMain() {
   return mains[getRandomIndex(mains)]; //return random string from array
 }
+
 function generateDessert() {
   return desserts[getRandomIndex(desserts)]; //return random string from array
 }
+
 function generateEntireMeal() {
   return `${generateMain()} with a side of ${generateSide()} and ${generateDessert()} for dessert!`
 }
